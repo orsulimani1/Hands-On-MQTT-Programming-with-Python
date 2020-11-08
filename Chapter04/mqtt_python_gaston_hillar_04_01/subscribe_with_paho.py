@@ -11,7 +11,7 @@ def on_connect(client, userdata, flags, rc):
     print("Result from connect: {}".format(
         mqtt.connack_string(rc)))
     # Subscribe to the vehicles/vehiclepi01/tests topic filter
-    client.subscribe("vehicles/vehiclepi01/tests", qos=2)
+    client.subscribe("vehicles/vehiclepi01/tests", qos=1)
 
 
 def on_subscribe(client, userdata, mid, granted_qos):
